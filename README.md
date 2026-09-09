@@ -114,7 +114,28 @@ Local Business Growth & Lead Intelligence Platform/
 
 ---
 
-## ⚡ Quickstart Guide
+## 🌐 Deployment Guide (Render & Streamlit Cloud)
+
+### Option A: Deploy to Render
+This repository includes ready-to-use [`render.yaml`](render.yaml) and [`Procfile`](Procfile) files.
+1. Push this project to your GitHub account (see instructions below).
+2. Go to [Render Dashboard](https://dashboard.render.com/) and click **New +** ➔ **Web Service**.
+3. Connect your GitHub repository.
+4. Render automatically detects the configuration:
+   - **Environment**: `Python 3`
+   - **Build Command**: `pip install -r requirements.txt`
+   - **Start Command**: `streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true`
+5. Click **Create Web Service**. Your live app will be deployed at `https://<your-service-name>.onrender.com`.
+
+### Option B: Deploy to Streamlit Community Cloud (Recommended for Interviewers)
+1. Go to [share.streamlit.io](https://share.streamlit.io).
+2. Sign in with GitHub and click **New app**.
+3. Select your repository, Branch: `main`, and Main file path: `app.py`.
+4. Click **Deploy!** Your app will be live with zero cold-starts at `https://<your-app-name>.streamlit.app`.
+
+---
+
+## ⚡ Quickstart Guide (Local)
 
 ### 1. Install Dependencies
 ```bash
